@@ -23,7 +23,7 @@ requirements:
   run:
     - python >={{ python_min }}
     - setuptools-scm >=7
-    - packaging >= 17
+    - packaging >=17
 
 test:
   imports:
