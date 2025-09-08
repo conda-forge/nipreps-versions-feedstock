@@ -1,5 +1,5 @@
 {% set name = "nipreps-versions" %}
-{% set version = "1.0.4" %}
+{% set version = "1.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,22 +7,23 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/nipreps_versions-{{ version }}.tar.gz
-  sha256: 841ff517f320c07193487cf97b90768f1048aef18fac1298b597d9b4972feebf
+  sha256: 18157b78b71cefee7032c0f86a7698e721dcb09ca383f993e10ea5a48bd8bc0a
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
     - python {{ python_min }}
-    - flit-scm
+    - pdm-backend
+    - uv
     - pip
   run:
     - python >={{ python_min }}
     - setuptools-scm >=7
-    - packaging
+    - packaging >=17
 
 test:
   imports:
