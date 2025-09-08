@@ -17,12 +17,13 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - flit-scm
+    - pdm-backend
+    - uv
     - pip
   run:
     - python >={{ python_min }}
     - setuptools-scm >=7
-    - packaging
+    - packaging >= 17
 
 test:
   imports:
