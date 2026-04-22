@@ -1,5 +1,5 @@
 {% set name = "nipreps-versions" %}
-{% set version = "1.1.0" %}
+{% set version = "1.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/nipreps_versions-{{ version }}.tar.gz
-  sha256: 18157b78b71cefee7032c0f86a7698e721dcb09ca383f993e10ea5a48bd8bc0a
+  sha256: 45d2507ccac628daec195d0c6d4ddcd72b5472e9779b805828ea36ee20437249
 
 build:
   noarch: python
